@@ -1,0 +1,4 @@
+skyper
+======
+
+Ruby Skype API
