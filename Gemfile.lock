@@ -1,0 +1,16 @@
+PATH
+  remote: .
+  specs:
+    skyper (0.1.0)
+      rb-appscript (>= 0.3.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rb-appscript (0.6.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  skyper!
