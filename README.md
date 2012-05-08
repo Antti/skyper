@@ -23,7 +23,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Send a message to the most recent chat:
+
+	# Get latest active chat
+	chat = Skyper::Chat.recent_chats.first
+	# Send a message to this chat
+	message = chat.chat.chat_message("Hello there")
+	# message is a Message object.
+	message.body
+	=> "Hello there"
+	message.body = "Bye"
+	=> "Bye"
+
+Send sms:
+
+    sms = Skyper::SMS.create("+3809901234567") # => "SMS 354924 STATUS COMPOSING"
+    sms.body = "Hello from Skype" # => "Hello from Skype"
+    sms.send_sms
+
 
 ## Contributing
 

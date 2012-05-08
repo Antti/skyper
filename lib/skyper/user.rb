@@ -11,5 +11,9 @@ module Skyper
       Chat.create id
     end
 
+    def to_s
+      handle
+    end
+
   end
 end

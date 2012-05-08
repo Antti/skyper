@@ -6,6 +6,7 @@ require 'forwardable'
 module Skyper
 
   # Singleton for interfacing with Skype
+  # See https://developer.skype.com/public-api-reference for objects properties
   class Skype
     include Singleton
     attr_accessor :script_name
@@ -21,6 +22,7 @@ module Skyper
       @connection.send_command(command)
     end
 
+    # @return[Profile] current profile
     def profile
       @profile ||= Profile.new(nil)
     end
