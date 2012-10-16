@@ -28,7 +28,7 @@ Send a message to the most recent chat:
 	# Get latest active chat
 	chat = Skyper::Chat.recent_chats.first
 	# Send a message to this chat
-	message = chat.chat.chat_message("Hello there")
+	message = chat.chat_message("Hello there")
 	# message is a Message object.
 	message.body
 	=> "Hello there"
