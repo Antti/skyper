@@ -1,5 +1,5 @@
 module Skyper
-  # Represents skype object with id and properties, such as:
+  # Represents a generic skype object with id and properties, such as:
   # USER, PROFILE, CALL, CHATMESSAGE, CHAT, etc.
   # see: https://developer.skype.com/public-api-reference#OBJECTS
   class SkypeObject

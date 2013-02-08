@@ -1,4 +1,3 @@
 module Skyper
-	class SkypeError<StandardError
-	end
+	class SkypeError<StandardError;end
 end

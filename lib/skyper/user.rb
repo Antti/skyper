@@ -7,8 +7,9 @@ module Skyper
     property_accessor *%w[BUDDYSTATUS ISBLOCKED ISAUTHORIZED SPEEDDIAL DISPLAYNAME]
     self.object_name = "USER"
 
+    # Create a chat with this user
     def chat
-      Chat.create id
+      Chat.create handle
     end
 
     def to_s

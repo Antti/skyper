@@ -11,19 +11,21 @@ Inspired by rb-skypemac.
 
 Add this line to your application's Gemfile:
 
-    gem 'skyper'
+	gem 'skyper'
 
 And then execute:
 
-    $ bundle
+	$ bundle
 
 Or install it yourself as:
 
-    $ gem install skyper
+	$ gem install skyper
 
 ## Usage
 
-Send a message to the most recent chat:
+#### _I need help writing documentation for this library_
+
+###Send a message to the most recent chat:
 
 	# Get latest active chat
 	chat = Skyper::Chat.recent_chats.first
@@ -35,11 +37,21 @@ Send a message to the most recent chat:
 	message.body = "Bye"
 	=> "Bye"
 
-Send sms:
+###Send a message to the given user:
+	chat = Skyper::Chat.create(skype_id)
+	chat.chat_message "hello"
 
-    sms = Skyper::SMS.create("+3809901234567") # => "SMS 354924 STATUS COMPOSING"
-    sms.body = "Hello from Skype" # => "Hello from Skype"
-    sms.send_sms
+###Send sms:
+
+	sms = Skyper::SMS.create("+3809901234567") # => "SMS 354924 STATUS COMPOSING"
+	sms.body = "Hello from Skype" # => "Hello from Skype"
+	sms.send_sms
+
+
+## Platforms support
+
+It currently support MacOS X 10.6 - 10.8 as a platform.
+I don't currently have Linux box available to implement DBus (Linux/FreeBSD) support.
 
 
 ## Contributing
